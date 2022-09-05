@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: Montserrat;
+  color: hsl(228deg, 12%, 48%);
+}
+
+.title,
+.current-price {
+  font-family: Fraunces;
+  font-size: xx-large;
+}
+
+.category span {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.title {
+  color: hsl(212deg, 21%, 14%);
+  margin-top: -10px;
+}
+
+#card-main {
+  min-width: 600px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+#card-main .img-desktop {
+  width: 300px;
+  height: calc(100% + 10px);
+}
+#card-main .img-mobile {
+  display: none;
+}
+#card-main .info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  padding: 20px 20px 20px 0;
+}
+#card-main .info-box .price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#card-main .info-box .price .current-price {
+  color: hsl(158deg, 36%, 37%);
+}
+#card-main .info-box button {
+  background-color: hsl(158deg, 36%, 37%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: Montserrat;
+  padding: 10px 0;
+  font-size: 1rem;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+#card-main .info-box button:hover {
+  background-color: hsl(212deg, 21%, 14%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    align-items: flex-start;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #card-main {
+    max-width: 340px;
+    min-width: 340px;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  #card-main .image-box {
+    margin: 0px;
+  }
+  #card-main .img-desktop {
+    display: none;
+  }
+  #card-main .img-mobile {
+    display: inline-block;
+    width: 340px;
+  }
+  #card-main .info-box {
+    padding: 0 30px;
+  }
+  #card-main .info-box button {
+    margin-bottom: 20px;
+    margin-top: -10PX;
+  }
+}/*# sourceMappingURL=style.css.map */
